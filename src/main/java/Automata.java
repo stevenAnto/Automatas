@@ -39,22 +39,22 @@ public class Automata {
     }
 
     public static void automataImpar_a(String palabra) {
-        String estado = "e";
+        String estado = "p";
 
         char[] arrayChar = turnInto(palabra);
         for (int i = 0; i < arrayChar.length; i++) {
-            if (estado.equals("e") && arrayChar[i] == 'a') {
+            if (estado.equals("p") && arrayChar[i] == 'a') {
                 //System.out.print("entro1\t");
                 //System.out.print(estado);
-                estado = "o";
-            } else if (estado.equals("o") && arrayChar[i] == 'a') {
+                estado = "np";
+            } else if (estado.equals("np") && arrayChar[i] == 'a') {
                 //System.out.print("entro2\t");
                 //System.out.print(estado);
-                estado = "e";
+                estado = "p";
             }
-            System.out.println("estado ultimo" + estado + "\n");
+           // System.out.println("estado ultimo" + estado + "\n");
         }
-        if (estado.equals("o")) {
+        if (estado.equals("np")) {
             System.out.println("aceptar");
 
         } else {
