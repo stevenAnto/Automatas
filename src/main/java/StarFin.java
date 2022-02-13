@@ -22,7 +22,7 @@ public class StarFin {
             if (palabraIngresda.equals("0")) {
                 break;
             }
-            automataOnlyB(palabraIngresda);
+            automataStartEnd(palabraIngresda);
 
         }
 
@@ -34,7 +34,7 @@ public class StarFin {
         return arrayChar;
     }
 
-    public static void automataOnlyB(String palabra) {
+    public static void automataStartEnd(String palabra) {
         String estado = "e1";
         char[] arrayChar;
         arrayChar = turnInto(palabra);
